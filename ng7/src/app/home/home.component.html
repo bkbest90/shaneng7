@@ -1,0 +1,23 @@
+<h1>Home</h1>
+<mat-checkbox color=primary disabled = "false">Check me!</mat-checkbox> <br>
+
+    <mat-form-field appearance="outline" >
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="Jimmy">
+    </mat-form-field>
+
+<ul *ngIf="users">
+    <li *ngFor="let user of users.data">
+        <img [src]="user.avatar">
+        <p>{{ user.first_name }} {{user.last_name}} </p>
+    </li>
+</ul>
+
+
+
+<!-- <h1 [ngStyle]="{
+    'color' : h1Style ? 'gray' : 'black',
+    'font-size' : !h1Style ? '1em' : '4em'
+}">Home</h1>
+
+<button (click)="firstClick()">Click me</button> -->
